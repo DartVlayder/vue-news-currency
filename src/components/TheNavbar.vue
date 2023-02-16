@@ -3,7 +3,7 @@
       <slot name="refresh"></slot>
       <slot name="back"></slot>
       <nav>
-        <router-link to="/">Домашняя страница</router-link> |
+        <router-link to="/">Cтраница новостей</router-link> |
         <router-link to="/CurrencyView">Курсы валют</router-link>
       </nav>
     </header>
