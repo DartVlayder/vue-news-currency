@@ -42,9 +42,10 @@ export default {
   },
   methods: {
     setResult (data) {
+      this.news = []
       localStorage.clear()
-      localStorage.setItem('news', JSON.stringify(this.news))
       this.news.push(data.articles)
+      localStorage.setItem('news', JSON.stringify(this.news))
       this.isLoad = false
     },
     serverNews () {

@@ -8,32 +8,6 @@
       </nav>
     </header>
 </template>
-<script>
-export default {
-    data() {
-    return {
-      news: this.$store.getters.NEWS
-    }
-  },
-  methods: {
-    setResult (data) {
-      localStorage.clear()
-      localStorage.setItem('news', JSON.stringify(this.news))
-      this.news.push(data.articles)
-      console.log(this.news); 
-    },
-    serverNews () {
-      fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=81332f1e69b94b54b43cac582b591c9e')
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          this.setResult(data)
-      });
-    }
-  },
-}
-</script>
 <style lang="scss">
   .header {
     height: 35px;
